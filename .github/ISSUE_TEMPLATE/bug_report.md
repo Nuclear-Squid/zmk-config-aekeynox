@@ -7,6 +7,11 @@ assignees: ''
 
 ---
 
+## Checklist before opening
+- [ ] You have read the [README](https://github.com/OneDeadKey/zmk-config-aekeynox/)
+- [ ] The `KB_LAYOUT_*` setting matches the keyboard layout on your computer
+- [ ] The `KB_EMULATION_*` setting is enabled only if needed
+
 ## Bug Description
 A clear and concise description of what the bug is.
 
