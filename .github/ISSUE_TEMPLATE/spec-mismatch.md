@@ -26,5 +26,5 @@ assignees: ''
 
 ## Which keyboard and what settings do you use?
 - keyboard: quacken_flex, corne, ferris…
-- settings: list of enabled options in `settings.h`
+- list of enabled options in `settings.h`
 - link to the commit that stardet the GitHub Action
