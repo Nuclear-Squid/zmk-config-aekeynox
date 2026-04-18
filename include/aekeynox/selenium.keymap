@@ -69,7 +69,11 @@
     //                 -- keyboard shortcuts on the left hand are adjusted to the OS layout (Ergol here)
     navigation_layer: navigation_layer {
       display-name = "Navigation";
-      bindings = <SELENIUM_LAYER_COMPOSE(NAV_LEFT, NAV_RIGHT)>;
+      bindings = <SELENIUM_LAYER_COMPOSE(NAV_LEFT, NAV_RIGHT,
+        &kp CAPS , &sc FN_MEDIA_LAYER DEL , &sc NUM_ROW_LAYER LS(TAB) , &kp ESCAPE , &lt FN_MEDIA_LAYER LS(SPACE) , &EZ_LSK(RALT)
+        /* &kp CAPS , &sc FN_MEDIA_LAYER DEL , &kp LS(TAB) , &kp ESCAPE , &lt FN_MEDIA_LAYER LS(SPACE) , &EZ_LSK(RALT) */
+        /* &kp CAPS , &lt FN_MEDIA_LAYER DEL , &mo NUM_ROW_LAYER , &trans ,  &mo FN_MEDIA_LAYER , &EZ_LSK(RALT) */
+      )>;
     };
 
     // 4. NumRow layer -- bring the numbers to the homerow, keep shift+numbers for shortcuts and symbols
@@ -90,7 +94,9 @@
     //                  -- could be completed with other rare keys
     function_layer: function_layer {
       display-name = "Function";
-      bindings = <SELENIUM_LAYER_COMPOSE(FN_LEFT, FN_RIGHT)>;
+      bindings = <SELENIUM_LAYER_COMPOSE(FN_LEFT, FN_RIGHT,
+        &trans , &trans , &bootloader , &sys_reset , &trans , &studio_unlock
+      )>;
     };
 
   };

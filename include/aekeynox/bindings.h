@@ -27,8 +27,8 @@
 #endif
 
 
-#define SELENIUM_LAYER_COMPOSE_(LROW1, LROW2, LROW3, LT1, LT2, LT3, \
-                                RROW1, RROW2, RROW3, RT1, RT2, RT3) \
+#define SELENIUM_LAYER_COMPOSE_(LROW1, LROW2, LROW3, RROW1, RROW2, RROW3, \
+                                LT1,   LT2,   LT3,   RT1,   RT2,   RT3) \
   SELENIUM_KEYMAP_BINDINGS(&trans,  LROW1,  RROW1,  &trans, \
                            &trans,  LROW2,  RROW2,  &trans, \
                            &trans,  LROW3,  RROW3,  &trans, \
