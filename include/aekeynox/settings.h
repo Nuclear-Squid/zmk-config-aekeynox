@@ -14,7 +14,7 @@
 // #define KB_LAYOUT_BEPO              // France
 // #define KB_LAYOUT_BEPOLAR           // France
 // #define KB_LAYOUT_DVORAK            // US
-// #define KB_LAYOUT_ERGOL             // France
+#define KB_LAYOUT_ERGOL             // France
 // #define KB_LAYOUT_ERGLACE           // France
 // #define KB_LAYOUT_QWERTY_BR         // Brazil
 // #define KB_LAYOUT_QWERTY_DK         // Denmark
@@ -42,7 +42,7 @@
 // Uncomment one of the following lines if the host computer doen't run Windows.
 
 // #define MACOS
-// #define LINUX
+#define LINUX
 
 
 /******************************************************************************
@@ -115,7 +115,7 @@
 // are the ones that may produce text, including the space bar and home row mods.
 // Keep this value high if you struggle with home row mods.
 
-// #define TAPPING_TERM 300
+#define TAPPING_TERM 250
 
 // This defines how quickly (in ms) you need to press and release a hold-tap
 // with the "hold-preferred" flavor for it to be considered a tap. These
@@ -144,7 +144,7 @@
 //  + Escape under the left thumb (direct access)
 // Highly recommended for Vim users, obviously. :-)
 
-// #define VIM_NAVIGATION
+#define VIM_NAVIGATION
 
 // [Experimental]
 // Uncomment the following line to enable the Callum variant of the previous
@@ -164,7 +164,7 @@
 
 // #define NAV_LEFT  HL_ARROWS_ESDF
 // #define NAV_RIGHT HL_NUMPAD
-// #define FN_LEFT   HL_FUN_PAD
+#define FN_LEFT   HL_MIRROR
 // #define FN_RIGHT  HL_MEDIA
 
 // Uncomment some of the following lines to customise which layer the thumb
@@ -172,8 +172,12 @@
 
 // #define L_LAYER_1 NAV_LAYER
 // #define R_LAYER_1 NAV_LAYER
-// #define L_LAYER_2 FN_MEDIA_LAYER
+#define L_LAYER_2 FN_MEDIA_LAYER
 // #define R_LAYER_2 FN_MEDIA_LAYER
+
+#ifdef FOUR_THUMB_KEYS
+  #define R_LAYER_1 NUM_ROW_LAYER
+#endif
 
 // Uncomment the following line to specify which layer contains the numbers,
 // so that transitions from the Navigation or Symbols layers work as expected.
@@ -224,4 +228,4 @@
 // keystrokes). The adaptations are layout-specific; as of today, only Ergol is
 // supported.
 
-// #define ENABLE_HUMMINGBIRD_MODE
+#define ENABLE_HUMMINGBIRD_MODE

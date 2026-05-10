@@ -36,6 +36,8 @@
  * Beware: missing or misplacing a comma in the definitions below would break the keymap.
  */
 
+#define X_BASE &to BASE_LAYER
+
 / {
   keymap {
     compatible = "zmk,keymap";
@@ -54,13 +56,23 @@
     };
 
     // 1. NumLock layer -- a NavNum layer that stays on until deactivated without holding any key
-    num_lock_layer: num_lock_layer {
-      display-name = "NumLock";
+    /* num_lock_layer: num_lock_layer { */
+      /* display-name = "NumLock"; */
+      /* bindings = <SELENIUM_KEYMAP_BINDINGS( */
+        /* &trans  ,  &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP   ,   &to BASE_LAYER S_N7  S_N8  S_N9  S_FSLH  ,  &trans , */
+        /* &trans  ,  S_EQUAL  &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN   ,   S_MINUS        S_N4  S_N5  S_N6  S_N0    ,  &trans , */
+        /* &trans  ,  S_MONEY  S_COLON  S_STAR   S_PLUS    S_PRCNT     ,   S_COMMA        S_N1  S_N2  S_N3  S_DOT   ,  &trans , */
+                     /* &trans , &sc NAV_LAYER BACKSPACE , &kp (TAB)   ,   &trans , &lt NAV_LAYER LS(SPACE) , &EZ_SL(SYMBOLS_LAYER) */
+      /* )>; */
+    /* }; */
+
+    gaming_ergol {
+      display-name = "GamingErgol";
       bindings = <SELENIUM_KEYMAP_BINDINGS(
-        &trans  ,  &kp ESC  &kp HOME &kp UP   &kp END   &kp PG_UP   ,   &to BASE_LAYER S_N7  S_N8  S_N9  S_FSLH  ,  &trans ,
-        &trans  ,  S_EQUAL  &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN   ,   S_MINUS        S_N4  S_N5  S_N6  S_N0    ,  &trans ,
-        &trans  ,  S_MONEY  S_COLON  S_STAR   S_PLUS    S_PRCNT     ,   S_COMMA        S_N1  S_N2  S_N3  S_DOT   ,  &trans ,
-                     &trans , &sc NAV_LAYER BACKSPACE , &kp (TAB)   ,   &trans , &lt NAV_LAYER LS(SPACE) , &EZ_SL(SYMBOLS_LAYER)
+        &none , &kp LCTL &kp Q &kp W &kp E &kp R   ,    &kp N &kp U &kp I     &apos     X_BASE   , &none  ,
+        &none , &kp LSFT &kp A &kp S &kp D &kp F   ,    &kp H &kp J &kp K     &kp L     &kp SEMI , &none  ,
+        &none , &none    &kp X &kp C &kp V &none   ,    &none &kp M &kp COMMA &kp DOT   &none    , &none  ,
+            &hrm LGUI ESCAPE , &kp SPACE , &none   ,    &none , &kp SPACE , &lt NUM_LAYER BSPC
       )>;
     };
 
@@ -105,7 +117,7 @@
     function_layer: function_layer {
       display-name = "Function";
       bindings = <SELENIUM_LAYER_COMPOSE(FN_LEFT, FN_RIGHT,
-        &trans , &bootloader , &trans , &trans , &sys_reset , &studio_unlock
+        &to NUM_LOCK_LAYER , &bootloader , &trans , &trans , &sys_reset , &studio_unlock
       )>;
     };
 
