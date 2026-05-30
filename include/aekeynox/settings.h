@@ -17,13 +17,13 @@
 // #define KB_LAYOUT_ERGOL
 // #define KB_LAYOUT_ERGLACE
 // #define KB_LAYOUT_QWERTY_INTL
-// #define KB_LAYOUT_QWERTY_LAFAYETTE
+#define KB_LAYOUT_QWERTY_LAFAYETTE
 
 // Some keyboard layouts and shortcuts may vary between Windows / macOS / Linux.
 // Uncomment one of the following lines if the host computer doen't run Windows.
 
 // #define MACOS
-// #define LINUX
+#define LINUX
 
 
 /******************************************************************************
@@ -63,7 +63,7 @@
 // Uncomment one of the following lines to pick your preferred hold-tap config.
 
 // #define HT_NONE
-// #define HT_THUMB_TAPS
+#define HT_THUMB_TAPS
 // #define HT_HOME_ROW_MODS  // (default behavior)
 // #define HT_TWO_THUMB_KEYS
 
