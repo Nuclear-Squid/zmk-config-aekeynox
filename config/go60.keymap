@@ -12,17 +12,17 @@
 #include <aekeynox/selenium.keymap>
 #include <input/processors.dtsi>
 
-&cirque_lh_listener { input-processors = <&sensor_rotation>; };
-&cirque_rh_listener { input-processors = <&sensor_rotation>; };
-
-/ {
-  input_processors {
-    sensor_rotation: sensor_rotation {
-      compatible = "zmk,input-processor-sensor-rotation";
-      #input-processor-cells = <0>;
-      rotation-angle = <90>;
-    };
-  };
-};
-
-#include <input/processors/sensor_rotation.dtsi>
+/* &cirque_lh_listener { input-processors = <&sensor_rotation>; }; */
+/* &cirque_rh_listener { input-processors = <&sensor_rotation>; }; */
+/**/
+/* / { */
+/*   input_processors { */
+/*     sensor_rotation: sensor_rotation { */
+/*       compatible = "zmk,input-processor-sensor-rotation"; */
+/*       #input-processor-cells = <0>; */
+/*       rotation-angle = <90>; */
+/*     }; */
+/*   }; */
+/* }; */
+/**/
+/* #include <input/processors/sensor_rotation.dtsi> */
