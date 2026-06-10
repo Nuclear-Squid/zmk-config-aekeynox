@@ -12,8 +12,30 @@
 #include <aekeynox/selenium.keymap>
 #include <input/processors.dtsi>
 
-&cirque_lh_listener { input-processors = <&sensor_rotation>; };
-/* &cirque_rh_listener { input-processors = <&sensor_rotation>; }; */
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/input_transform.h>
+#include <dt-bindings/zmk/pointing.h>
+
+&cirque_rh_listener {
+    input-processors = <&zip_xy_scaler 3 1>, <&sensor_rotation>;
+    layer_2 {
+        layers = <2>;
+        input-processors = <&zip_xy_scaler 9 1>;
+    };
+};
+
+&cirque_lh_listener {
+    input-processors = <&zip_xy_to_scroll_mapper>, <&zip_xy_scaler 1 8>, <&zip_click_to_right_click_mapper>, <&sensor_rotation>;
+    layer_4 {
+        layers = <4>;
+        input-processors = <&zip_xy_scaler 3 1>;
+    };
+};
 
 
 / {
