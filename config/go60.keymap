@@ -13,20 +13,21 @@
 #include <input/processors.dtsi>
 
 / {
-    trackpad_listener {
+  trackpad_listener {
     compatible = "zmk,input-listener";
+    device = <&glidepoint>;
     input-processors = <&sensor_rotation>;
-    };
+  };
 };
 
 / {
-    input_processors {
-        sensor_rotation: sensor_rotation {
-            compatible = "zmk,input-processor-sensor-rotation";
-            #input-processor-cells = <0>;
-            rotation-angle = <90>;
-        };
+  input_processors {
+    sensor_rotation: sensor_rotation {
+      compatible = "zmk,input-processor-sensor-rotation";
+      #input-processor-cells = <0>;
+      rotation-angle = <90>;
     };
+  };
 };
 
 #include <input/processors/sensor_rotation.dtsi>
