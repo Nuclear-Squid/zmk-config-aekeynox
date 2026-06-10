@@ -12,13 +12,8 @@
 #include <aekeynox/selenium.keymap>
 #include <input/processors.dtsi>
 
-/ {
-  trackpad_listener {
-    compatible = "zmk,input-listener";
-    device = <&glidepoint>;
-    input-processors = <&sensor_rotation>;
-  };
-};
+&cirque_lh_listener { input-processors = <&sensor_rotation>; };
+&cirque_rh_listener { input-processors = <&sensor_rotation>; };
 
 / {
   input_processors {
