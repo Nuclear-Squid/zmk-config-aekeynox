@@ -12,8 +12,8 @@
 #include <aekeynox/selenium.keymap>
 #include <input/processors.dtsi>
 
-/* &cirque_lh_listener { input-processors = <&sensor_rotation>; }; */
-&cirque_rh_listener { input-processors = <&sensor_rotation>; };
+&cirque_lh_listener { input-processors = <&sensor_rotation>; };
+/* &cirque_rh_listener { input-processors = <&sensor_rotation>; }; */
 
 
 / {
