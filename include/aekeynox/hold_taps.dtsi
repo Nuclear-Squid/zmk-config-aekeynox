@@ -65,9 +65,9 @@
  */
 
 #ifdef ENABLE_MOD_HOLD_NAVIGATION
-  #define NAV_SC &mhsc
+  #define NAV_SC &mhsb
 #else
-  #define NAV_SC &sc
+  #define NAV_SC &sb
 #endif
 
 #ifdef ENABLE_QUICK_ESCAPE
@@ -175,6 +175,14 @@
       tapping-term-ms = <SHORT_TAPPING_TERM>;
       quick-tap-ms = <QUICK_TAP>;
       flavor = "hold-preferred";
+      bindings = <&mo>, <&kp>;
+    };
+    OMIT_IF_NO_REF sb: balanced_cadet { // same as lt, but with hold-preferred
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      tapping-term-ms = <SHORT_TAPPING_TERM>;
+      quick-tap-ms = <QUICK_TAP>;
+      flavor = "balanced";
       bindings = <&mo>, <&kp>;
     };
 
@@ -317,6 +325,7 @@
 
     MOD_HOLD_0(mh, &none, MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)
     MOD_HOLD_1(mhsc, &sc, MOD_LALT)
+    MOD_HOLD_2(mhsb, &sb, MOD_LALT)
     MOD_HOLD_2(mhhrm, &hrm, MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)
 
     OMIT_IF_NO_REF mhkp: hrm_with_raw_mh_on_hold {
