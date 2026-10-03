@@ -14,7 +14,7 @@
 // #define KB_LAYOUT_BEPO              // France
 // #define KB_LAYOUT_BEPOLAR           // France
 // #define KB_LAYOUT_DVORAK            // US
-// #define KB_LAYOUT_ERGOL             // France
+#define KB_LAYOUT_ERGOL             // France
 // #define KB_LAYOUT_ERGLACE           // France
 // #define KB_LAYOUT_QWERTY_BR         // Brazil
 // #define KB_LAYOUT_QWERTY_DK         // Denmark
@@ -42,7 +42,7 @@
 // Uncomment one of the following lines if the host computer doen't run Windows.
 
 // #define MACOS
-// #define LINUX
+#define LINUX
 
 
 /******************************************************************************
@@ -95,7 +95,7 @@
 // Uncomment the following line for an improved dead key support.
 // This only applies to some Hummingbird keymaps and layout emulations.
 
-// #define ENABLE_FANCY_DEAD_KEYS
+#define ENABLE_FANCY_DEAD_KEYS
 
 
 /******************************************************************************
@@ -106,7 +106,7 @@
 
 // #define HT_NONE
 // #define HT_THUMB_TAPS
-// #define HT_HOME_ROW_MODS  // (default behavior)
+#define HT_HOME_ROW_MODS  // (default behavior)
 // #define HT_TWO_THUMB_KEYS
 
 // Timing is key! Keep the default value if unsure.
@@ -115,7 +115,7 @@
 // are the ones that may produce text, including the space bar and home row mods.
 // Keep this value high if you struggle with home row mods.
 
-// #define TAPPING_TERM 300
+#define TAPPING_TERM 250
 
 // This defines how quickly (in ms) you need to press and release a hold-tap
 // with the "hold-preferred" flavor for it to be considered a tap. These
@@ -144,7 +144,7 @@
 //  + Escape under the left thumb (direct access)
 // Highly recommended for Vim users, obviously. :-)
 
-// #define VIM_NAVIGATION
+#define VIM_NAVIGATION
 
 // [Experimental]
 // Uncomment the following line to enable the Callum variant of the previous
@@ -163,7 +163,7 @@
 // Note: you may have to release and rehold the layer to drop modifiers you
 // no longer need.
 
-// #define ENABLE_MOD_HOLDS
+#define ENABLE_MOD_HOLDS
 
 // Uncomment the following line to enable shift as a pinky HRM.
 // Useful for combined shortcuts, but NOT MEANT to type text!
@@ -183,4 +183,4 @@
 // keystrokes). The adaptations are layout-specific; as of today, only Ergol is
 // supported.
 
-// #define ENABLE_HUMMINGBIRD_MODE
+#define ENABLE_HUMMINGBIRD_MODE
